@@ -1,15 +1,24 @@
+//
+//  ContentView.swift
+//  HelloWorld
+//
+//  Created by Xcode on 3/16/25.
+//
+
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-            .font(.largeTitle)
-            .padding()
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello, world!")
+        }
+        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }
