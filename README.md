@@ -21,7 +21,6 @@ The iOS application is located in the `ios` directory and consists of the follow
 
 - **HelloWorldApp.swift**: The entry point of the iOS application that sets up the initial view.
 - **ContentView.swift**: The main view of the app that displays "Hello, World!" on the screen.
-- **Info.plist**: Configuration settings for the app, including its name and version.
 - **Assets.xcassets/Contents.json**: Manages image assets for the app.
 
 ### Running the iOS Application
