@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Flashcard Quiz</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +12,21 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="fancy-title">Hello, World!</h1>
-        <p>Welcome to my simple website.</p>
-        <button id="greetButton">Click Me!</button>
+        <h1 class="fancy-title">Flashcard Quiz</h1>
+        <div id="flashcard">
+            <button id="prevButton" class="arrow-button">&lt;</button>
+            <div id="flashcardContent">
+                <div id="flashcardText"></div>
+                <img id="flashcardImage" src="images/flashcard-icon.png" alt="Flashcard Icon">
+            </div>
+            <button id="nextButton" class="arrow-button">&gt;</button>
+            <audio id="flashcardAudio" src=""></audio>
+        </div>
+        <div id="controls">
+            <button id="playSoundButton">Play Sound</button>
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
