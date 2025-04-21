@@ -1,0 +1,124 @@
+{
+    "passage" : [
+        {
+            "Subject": "Pseudoword Focus",
+            "Target": "Ability to decode unfamiliar non-words.",
+            "Content": "Lina woke up early to feed the plimons in the barn. She found that each plimon needed water before dawn. Then she carefully brushed their thick wool. The plimons seemed calm in the cool morning air.",
+            "Criteria": "Observe whether the reader decodes plimon smoothly or hesitates. Note if they guess or skip unfamiliar words."
+        },
+        {
+            "Subject": "Complex Consonant Clusters",
+            "Target": "Accuracy in reading tricky consonant blends and vowel digraphs.",
+            "Content": "Springtime brought sprightly breezes and scrawny saplings to the meadow. The children shrieked with delight as the fragrant blossoms thrived in the bright sunlight.",
+            "Criteria": "Listen for accurate pronunciation of sprightly, scrawny, shrieked, thrived. Check for reversed or missing sounds (e.g., omitting “r” or swapping blends)."
+        },
+        {
+            "Subject": "Visually Confusable Letters",
+            "Target": "Potential letter-reversal issues.",
+            "Content": "Ben dropped his blue book in the dark den. Dale picked it up and placed it beside a brown desk, hoping Dan would find it quickly.",
+            "Criteria": "Check for confusion when reading words like blue, brown, dark, desk, dropped. Note if b/d or p/q gets flipped or substituted."
+        },
+        {
+            "Subject": "High-Frequency Irregular Words",
+            "Target": "Reading words that do not follow straightforward phonetic rules.",
+            "Content": "While they walked through the aisle, Sheila noticed a glimpse of light from the ceiling. It was bizarre how the shadow island seemed to float in midair.",
+            "Criteria": "Track the reader’s handling of aisle, glimpse, bizarre, ceiling, island. Look for misreadings or substitutions (e.g., saying “is-land” for “island”)."
+        },
+        {
+            "Subject": "Homophone Confusion",
+            "Target": "Distinguishing words that sound alike but have different spellings or meanings.",
+            "Content": "The knight rode into the night without fear. His armor made him weak in the week of long battles, but he continued his quest with steeled resolve.",
+            "Criteria": "Monitor how the reader deals with knight vs. night, weak vs. week, and steeled. Note if they read them correctly but confuse meaning."
+        },
+        {
+            "Subject": "Mixed Pseudowords and Real Words",
+            "Target": "Switching between real words and nonsense words quickly.",
+            "Content": "Terry carried a small zopter in his pocket. Each time he heard a chirping crim outside, he would tap his zopter twice. Then he checked the garden for ripe tomatoes and fresh roses.",
+            "Criteria": "Observe reading of zopter and crim for decoding approach. Compare the fluency of real vs. nonsense words."
+        },
+        {
+            "Subject": "Morphologically Complex Words",
+            "Target": "Prefixes, suffixes, root words.",
+            "Content": "Martha’s unpredictable enthusiasm for prewriting exercises overshadowed her postseason vacation plans. She miscalculated the amount of time needed to reorganize her notes.",
+            "Criteria": "Check for smooth reading of longer words like unpredictable, miscalculated, overshadowed, reorganize. Listen for syllable-by-syllable reading or stumbling."
+        },
+        {
+            "Subject": "Grammar and Syntax Awareness",
+            "Target": "Identifying subtle grammatical structures that may disrupt fluency.",
+            "Content": "When the boy who wore the red jacket finally arrived, the teacher who had been waiting in the hallway greeted him warmly, although the bell had already rung.",
+            "Criteria": "Note if the reader skips words or confuses the sentence structure. Watch for halted pacing when encountering long clauses."
+        },
+        {
+            "Subject": "Short, Dense Text with Irregular Spellings",
+            "Target": "Decoding accuracy in short sentences where each word counts.",
+            "Content": "The chef meant to use eight eggs for the souffle, but he used only one, which led to an odd height in the final dish.",
+            "Criteria": "Focus on words like meant, eight, one, led, height. Note substitutions or omissions, especially with irregular vowel sounds."
+        },
+        {
+            "Subject": "Reading Comprehension with Pseudoword Names",
+            "Target": "Understanding content while navigating made-up names.",
+            "Content": "In the village of Tarron, King Zelmont declared that all citizens must plant vilder flowers before winter. People gathered in the town square, sharing seeds and motins to decorate the streets.",
+            "Criteria": "Ask comprehension questions: who is the king, what kind of flowers, what are motins? Note if decoding the made-up names affects understanding."
+        },
+        {
+            "Subject": "Rapid Decoding of Multi-Syllable Words",
+            "Target": "Fluency with longer words that may slow reading pace.",
+            "Content": "Magnificent cooperation between international organizations improved educational opportunities for underprivileged communities worldwide.",
+            "Criteria": "Assess reading of magnificent, cooperation, international, educational, underprivileged. Listen for inserted pauses or skipping syllables."
+        },
+        {
+            "Subject": "Familiar Topic, Complex Vocabulary",
+            "Target": "Testing if topic familiarity eases decoding.",
+            "Content": "Soccer players require cardiovascular endurance to sustain intensive play. Proper hydration and balanced nutrition contribute to their overall athleticism.",
+            "Criteria": "Determine whether familiarity with sports terms helps or if words like cardiovascular, hydration, athleticism still cause difficulty."
+        },
+        {
+            "Subject": "Historical or Etymological Spelling",
+            "Target": "Words with silent letters or archaic roots.",
+            "Content": "The knock on the gnarled oak door startled the guests. Their solemn whisper echoed in the large castle hall, heavy with centuries of ghostly lore.",
+            "Criteria": "Pay attention to how knock, gnarled, solemn, castle, ghostly are read. Note silent letters or skipping sounds."
+        },
+        {
+            "Subject": "Compound Words and Hyphenation",
+            "Target": "Checking reading of compound or hyphenated terms.",
+            "Content": "During the team-building exercise, participants formed laughter-filled circles in the sunlight-drenched garden, discussing their problem-solving strategies.",
+            "Criteria": "Listen for unnatural pauses when encountering team-building, laughter-filled, sunlight-drenched, problem-solving."
+        },
+        {
+            "Subject": "Homographs (Same Spelling, Different Pronunciation)",
+            "Target": "Recognizing context to decode meaning.",
+            "Content": "Please record your voice as you record the attendance numbers. Then read the record of events. Each record is stored on a shelf in the next room.",
+            "Criteria": "Check if the reader distinguishes the verb vs. noun use of record. Look for correct stress patterns in speech."
+        },
+        {
+            "Subject": "Figurative Language and Idioms",
+            "Target": "Comprehension beyond literal decoding.",
+            "Content": "Maria felt under the weather after hiking all day. She said she needed to hit the sack early, hoping she would feel bright-eyed again by morning.",
+            "Criteria": "Ask if the reader interprets under the weather, hit the sack, bright-eyed correctly. Monitor if they read them as literal statements."
+        },
+        {
+            "Subject": "Mixed Capitals and Lowercase (Visual Focus)",
+            "Target": "Checking for potential confusion when uppercase or lowercase are interspersed oddly.",
+            "Content": "Max visited the CoAst of Maine, where the sEA breeze felt Crisp. He admired the liGhThOuSe that rose tall above the rocky shore.",
+            "Criteria": "Observe if random capitals (CoAst, sEA, liGhThOuSe) cause stumbling or letter reversal."
+        },
+        {
+            "Subject": "Numerical and Alphanumeric Mixed",
+            "Target": "Quick shifts from text to numbers.",
+            "Content": "The bus arrived at 8:15 A.M., but ticket number B36 was not called until 9:05 A.M. Meanwhile, seat row 14 remained empty.",
+            "Criteria": "Watch the reader’s transition between words and numerals (8:15, 9:05, B36, 14). Note misreads or confusion."
+        },
+        {
+            "Subject": "Detailed Directions (Sequential Comprehension)",
+            "Target": "Tracking a multi-step sequence.",
+            "Content": "To open the box, first turn the silver handle clockwise three times, then push the metal latch inward, and finally lift the lid gently to avoid scratching.",
+            "Criteria": "After reading, see if the student can restate the steps in the correct order. Note if they skip any part."
+        },
+        {
+            "Subject": "Short Narrative with Uncommon Proper Nouns",
+            "Target": "Decoding unfamiliar words that appear real but are rarely seen in daily life.",
+            "Content": "On her journey through Myanmar, Yolanda visited Bago and admired the Shwemawdaw Pagoda. She continued to Mandalay, capturing photos of the U Bein Bridge at sunset.",
+            "Criteria": "Observe decoding of Myanmar, Bago, Shwemawdaw, Mandalay, U Bein. Check if the unusual names disrupt overall reading flow."
+        }
+    ]
+}
