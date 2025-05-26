@@ -1,19 +1,44 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Calibri, sans-serif;
     margin: 0;
     background-color: #f0f0f0;
 }
 
-.container {
+/* Navigation Bar */
+#navBar {
+    background-color: #333;
+    padding: 10px;
     text-align: center;
 }
 
+#navBar button {
+    background-color: #555;
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#navBar button:hover {
+    background-color: #777;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Section styling */
+.page {
+    margin-top: 20px;
+}
+
+/* Flashcard Styles */
 .fancy-title {
-    font-family: 'Pacifico', cursive;
+    font-family: Calibri, sans-serif;
     font-size: 2.5em;
     margin-bottom: 20px;
 }
@@ -46,6 +71,7 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Controls */
 #controls {
     display: flex;
     justify-content: center;
@@ -54,6 +80,7 @@ body {
 }
 
 #controls button {
+    font-family: Calibri, sans-serif;
     font-size: 1em;
     padding: 10px 20px;
     margin: 5px;
@@ -66,4 +93,81 @@ body {
     border: none;
     cursor: pointer;
     padding: 0 10px;
+}
+
+/* MCQ collapsible problem sets */
+.problem-set {
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.problem-set .toggle-set {
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 1.1em;
+    font-family: Calibri, sans-serif;
+}
+
+.problem-set ul {
+    list-style: none;
+    padding: 0 20px 10px 20px;
+}
+
+.problem-set li {
+    padding: 5px 0;
+}
+
+/* MCQ Panel and Form */
+.mcq-panel {
+    background-color: #fafafa;
+    padding: 10px;
+}
+
+.mcq-question {
+    margin-bottom: 15px;
+}
+
+.mcq-question p {
+    margin: 0 0 5px 0;
+}
+
+/* MCQ Navigation */
+.mcq-navigation {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.mcq-navigation button {
+    font-family: Calibri, sans-serif;
+    font-size: 1em;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* MCQ Viewer */
+#mcqViewer {
+    font-family: Calibri, sans-serif;
+}
+
+#mcqQuestionContainer {
+    background-color: #fafafa;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#mcqViewer button {
+    font-family: Calibri, sans-serif;
+    font-size: 1em;
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
 }
