@@ -1,16 +1,17 @@
-import XCTest
+//
+//  HelloWorldTests.swift
+//  HelloWorldTests
+//
+//  Created by Xcode on 3/16/25.
+//
+
+import Testing
 @testable import HelloWorld
 
-class HelloWorldTests: XCTestCase {
+struct HelloWorldTests {
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        XCTAssertEqual("Hello, World!", "Hello, World!")
+    @Test func example() async throws {
+        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
     }
 
-    func testPerformanceExample() throws {
-        self.measure {
-            // Measure the time of code here.
-        }
-    }
 }
