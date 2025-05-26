@@ -1,22 +1,7 @@
-const flashcards = [
-    { text: 'A', sound: 'sounds/a.mp3' },
-    { text: 'B', sound: 'sounds/b.mp3' },
-    // Add more flashcards as needed
-];
-
-let currentFlashcardIndex = 0;
-
-function loadFlashcard(index) {
-    const flashcard = flashcards[index];
-    const flashcardText = document.getElementById('flashcardText');
-    const flashcardAudio = document.getElementById('flashcardAudio');
-
-    flashcardText.textContent = flashcard.text;
-    flashcardAudio.src = flashcard.sound;
-}
+import { loadFlashcard, nextFlashcard, prevFlashcard } from './flashcard.js';
 
 window.onload = function() {
-    loadFlashcard(currentFlashcardIndex);
+    loadFlashcard(0);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,16 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     prevButton.addEventListener('click', () => {
-        currentFlashcardIndex = (currentFlashcardIndex - 1 + flashcards.length) % flashcards.length;
-        loadFlashcard(currentFlashcardIndex);
+        prevFlashcard();
     });
 
     nextButton.addEventListener('click', () => {
         nextFlashcard();
     });
 });
-
-function nextFlashcard() {
-    currentFlashcardIndex = (currentFlashcardIndex + 1) % flashcards.length;
-    loadFlashcard(currentFlashcardIndex);
-}
