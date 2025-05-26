@@ -1,19 +1,8 @@
-// ----- Flashcards functionality -----
-const flashcards = [
-    { text: 'A', sound: 'sounds/a.mp3' },
-    { text: 'B', sound: 'sounds/b.mp3' },
-    // Add more flashcards as needed
-];
+import { loadFlashcard, nextFlashcard, prevFlashcard } from './flashcard.js';
 
-let currentFlashcardIndex = 0;
-
-function loadFlashcard(index) {
-    const flashcard = flashcards[index];
-    const flashcardText = document.getElementById('flashcardText');
-    const flashcardAudio = document.getElementById('flashcardAudio');
-    flashcardText.textContent = flashcard.text;
-    flashcardAudio.src = flashcard.sound;
-}
+window.onload = function() {
+    loadFlashcard(0);
+};
 
 document.addEventListener('DOMContentLoaded', () => {
     // Clear out any saved progress for problem sets on entry.
@@ -46,8 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     prevButton.addEventListener('click', () => {
-        currentFlashcardIndex = (currentFlashcardIndex - 1 + flashcards.length) % flashcards.length;
-        loadFlashcard(currentFlashcardIndex);
+        prevFlashcard();
     });
 
     nextButton.addEventListener('click', () => {
