@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dyslexia Screening Games</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+  <!-- Guest Mode Banner -->
+  <div id="guest-banner" class="guest-mode-banner" style="display: none;">
+    You're playing as a guest. <a href="#" id="guest-signup-link">Sign up</a> to save your progress permanently!
+  </div>
+  
+  <!-- Auth Header -->
+  <header id="main-header" style="padding: 1rem; background: var(--card-bg, #f8f9fa); border-bottom: 1px solid var(--border-color, #dee2e6); display: flex; justify-content: space-between; align-items: center;">
+    <h1 style="margin: 0; font-size: 1.25rem;">Dyslexia Screening</h1>
+    <div class="auth-nav">
+      <span id="user-display">Guest User</span>
+  <button id="toggle-theme" class="btn" style="margin-left: 1rem;">Toggle Theme</button>
+  <button id="auth-button" class="btn" style="margin-left: 1rem;">Login</button>
+    </div>
+  </header>
+  <main>
+    <!-- Hub (default screen) -->
+    <section id="hub" class="screen active" aria-labelledby="hub-title">
+      <div class="container">
+        <h1 id="hub-title">Assessments</h1>
+        <p class="hint">Choose a form. All questions are multiple choice.</p>
+        <div class="grid three" id="game-grid">
+          <div class="task-card mini" id="card-k2c">
+            <h2>K–2 (Form C)</h2>
+            <p class="small" id="status-k2c">Not started</p>
+            <button class="btn btn-primary" id="start-k2c">Start</button>
+          </div>
+          <div class="task-card mini" id="card-k2d">
+            <h2>K–2 (Form D)</h2>
+            <p class="small" id="status-k2d">Not started</p>
+            <button class="btn btn-primary" id="start-k2d">Start</button>
+          </div>
+          <div class="task-card mini" id="card-g28c">
+            <h2>Grades 2–8 (Form C)</h2>
+            <p class="small" id="status-g28c">Not started</p>
+            <button class="btn btn-primary" id="start-g28c">Start</button>
+          </div>
+          <div class="task-card mini" id="card-g28d">
+            <h2>Grades 2–8 (Form D)</h2>
+            <p class="small" id="status-g28d">Not started</p>
+            <button class="btn btn-primary" id="start-g28d">Start</button>
+          </div>
+        </div>
+        <div class="actions-row">
+          <button class="btn" id="open-surveys">Surveys</button>
+          <span id="surveys-status" class="muted small"></span>
+          <button class="btn btn-primary" id="open-history-btn">Open History</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assessment Runner -->
+    <section id="set-assessment" class="screen" aria-labelledby="assessment-title" hidden>
+      <div class="container">
+        <h1 id="assessment-title">Assessment</h1>
+        <div class="task-card" id="assessment-stage">
+          <h2 id="as-section-title">Section</h2>
+          <div class="mini-stats"><span id="as-progress"></span></div>
+          <div id="as-question" class="passage-text">Question text…</div>
+          <div id="as-choices" class="choice-row" role="group" aria-label="Choices"></div>
+          <div class="mini-stats" id="as-feedback" aria-live="polite"></div>
+          <div class="actions-row">
+            <button class="btn" id="as-prev">Previous</button>
+            <button class="btn" id="as-next">Next</button>
+            <button class="btn" id="as-save">Save Progress</button>
+            <button class="btn btn-outline" id="as-cancel">Cancel</button>
+            <button class="btn btn-outline" id="as-exit">Exit</button>
+            <button class="btn btn-primary" id="as-submit" hidden>Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Survey Hub -->
+    <section id="survey-hub" class="screen" aria-labelledby="survey-hub-title" hidden>
+      <div class="container">
+        <h1 id="survey-hub-title">Surveys</h1>
+        <p class="hint">Answer each screener. Results are separate from the game-based verdict.</p>
+  <div class="grid three survey-grid">
+          <div class="task-card mini">
+            <h2>Cognitive Screener</h2>
+            <p class="small" id="status-cog">Not started</p>
+            <button class="btn btn-primary" id="start-cog">Start</button>
+          </div>
+          <div class="task-card mini">
+            <h2>Dyslexia-Specific Screener</h2>
+            <p class="small" id="status-dys">Not started</p>
+            <button class="btn btn-primary" id="start-dys">Start</button>
+          </div>
+          <div class="task-card mini">
+            <h2>Mental/Emotional Screener</h2>
+            <p class="small" id="status-men">Not started</p>
+            <button class="btn btn-primary" id="start-men">Start</button>
+          </div>
+        </div>
+        <div class="actions-row">
+          <button class="btn" id="survey-finalize-all">View Survey Results</button>
+          <button class="btn btn-outline" id="survey-hub-back">Back</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cognitive Survey -->
+    <section id="survey-cog" class="screen" aria-labelledby="survey-cog-title" hidden>
+      <div class="container">
+        <h1 id="survey-cog-title">Cognitive Screener</h1>
+        <div id="survey-cog-form"></div>
+        <div class="actions-row">
+          <button class="btn" id="survey-cog-save">Save</button>
+          <button class="btn btn-primary" id="survey-cog-submit">Submit Survey</button>
+          <button class="btn btn-outline" id="survey-cog-back">Back</button>
+        </div>
+        <div class="mini-stats" id="survey-cog-status"></div>
+      </div>
+    </section>
+
+    <!-- Dyslexia Survey -->
+    <section id="survey-dys" class="screen" aria-labelledby="survey-dys-title" hidden>
+      <div class="container">
+        <h1 id="survey-dys-title">Dyslexia-Specific Screener</h1>
+        <div id="survey-dys-form"></div>
+        <div class="actions-row">
+          <button class="btn" id="survey-dys-save">Save</button>
+          <button class="btn btn-primary" id="survey-dys-submit">Submit Survey</button>
+          <button class="btn btn-outline" id="survey-dys-back">Back</button>
+        </div>
+        <div class="mini-stats" id="survey-dys-status"></div>
+      </div>
+    </section>
+
+    <!-- Mental/Emotional Survey -->
+    <section id="survey-men" class="screen" aria-labelledby="survey-men-title" hidden>
+      <div class="container">
+        <h1 id="survey-men-title">Mental/Emotional Screener</h1>
+        <div id="survey-men-form"></div>
+        <div class="actions-row">
+          <button class="btn" id="survey-men-save">Save</button>
+          <button class="btn btn-primary" id="survey-men-submit">Submit Survey</button>
+          <button class="btn btn-outline" id="survey-men-back">Back</button>
+        </div>
+        <div class="mini-stats" id="survey-men-status"></div>
+      </div>
+    </section>
+
+    <!-- Survey Results -->
+    <section id="survey-results" class="screen" aria-labelledby="survey-results-title" hidden>
+      <div class="container">
+        <h1 id="survey-results-title">Survey Results</h1>
+        <div class="result-grid">
+          <div class="result-card">
+            <h2>Cognitive Screener</h2>
+            <p><strong>Score:</strong> <span id="cog-score">0</span>/80</p>
+            <p><strong>Interpretation:</strong> <span id="cog-interpret">—</span></p>
+          </div>
+          <div class="result-card">
+            <h2>Dyslexia-Specific Screener</h2>
+            <p><strong>Score:</strong> <span id="dys-score">0</span>/80</p>
+            <p><strong>Interpretation:</strong> <span id="dys-interpret">—</span></p>
+          </div>
+          <div class="result-card">
+            <h2>Mental/Emotional Screener</h2>
+            <p><strong>Score:</strong> <span id="men-score">0</span>/80</p>
+            <p><strong>Interpretation:</strong> <span id="men-interpret">—</span></p>
+          </div>
+        </div>
+        <div class="actions-row">
+          <button class="btn" id="survey-results-back">Back to Survey Hub</button>
+          <button class="btn btn-primary" id="survey-results-home">Back to Hub</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section id="history" class="screen" aria-labelledby="history-title" hidden>
+      <div class="container">
+        <h1 id="history-title">History</h1>
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="tab" data-filter="k2c" role="tab">K–2 C</button>
+          <button class="tab" data-filter="k2d" role="tab">K–2 D</button>
+          <button class="tab" data-filter="g28c" role="tab">2–8 C</button>
+          <button class="tab" data-filter="g28d" role="tab">2–8 D</button>
+          <button class="tab" data-filter="inprogress" role="tab">In Progress</button>
+        </div>
+        <div id="history-content" class="history-list" role="region" aria-live="polite"></div>
+        <div class="actions-row">
+          <button class="btn btn-outline" id="back-to-hub">Back</button>
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+
+  
+  <script src="js/auth.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

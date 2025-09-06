@@ -2,20 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Problem Set Stats</title>
+    <title>Statistics</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <style>
+        .accessibility-controls { position: fixed; top: 10px; right: 10px; }
+        .game-stats, .problemset-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .stat-card {
+            background: var(--card-bg, #f8f9fa);
+            border: 1px solid var(--border-color, #dee2e6);
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat-card h3 {
+            margin-top: 0;
+            color: var(--primary-color, #007bff);
+        }
+        .stat-card p {
+            margin: 0.5rem 0;
+        }
+        [data-theme="dark"] .stat-card {
+            --card-bg: #343a40;
+            --border-color: #495057;
+        }
+    </style>
 </head>
 <body>
+    <div class="accessibility-controls">
+        <button id="toggle-theme" class="btn" title="Toggle theme">Theme</button>
+    </div>
+    
+    <!-- Guest Banner -->
+    <div id="guest-banner" class="guest-banner" style="display: none;">
+        <div class="guest-content">
+            <span class="guest-text">📊 Guest Mode - Your stats are stored locally</span>
+            <button id="guest-banner-login" class="btn btn-sm">Login</button>
+        </div>
+    </div>
+
     <header>
-        <h1>Problem Set Stats</h1>
-        <!-- Link back to the main page -->
+        <h1>Statistics</h1>
         <nav>
             <a href="index.html">Home</a>
+            <a href="app.html">Games</a>
+            <div class="auth-nav">
+                <span id="user-display"></span>
+                <button id="auth-button" class="btn">Login</button>
+            </div>
         </nav>
     </header>
+    
     <main>
-        <div id="statsContainer"></div>
+        <div id="statsContainer">
+            <p>Loading statistics...</p>
+        </div>
     </main>
+    
+    <script src="js/theme.js"></script>
+    <script src="js/auth.js"></script>
     <script src="js/stats.js"></script>
+    
+    <script>
+        // Initialize auth UI when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.authService) {
+                window.authService.updateAuthUI();
+            }
+        });
+    </script>
 </body>
 </html>

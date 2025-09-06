@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Problem Set</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .accessibility-controls { position: fixed; top: 10px; right: 10px; }
+  </style>
 </head>
 <body>
+  <div class="accessibility-controls">
+    <button id="toggle-theme" class="btn" title="Toggle theme">Theme</button>
+  </div>
   <header id="navBar">
     <button id="exitBtn">Exit &amp; Save</button>
   </header>
@@ -20,6 +26,7 @@
       </div>
     </section>
   </div>
+  <script src="js/theme.js"></script>
   <script src="js/problemset.js"></script>
 </body>
 </html>

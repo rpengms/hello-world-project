@@ -3,44 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluate</title>
+    <title>Voice Test</title>
+    <meta http-equiv="refresh" content="1; url=app.html#set-voicetest">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style> .redir{max-width:640px;margin:4rem auto;text-align:center;} .redir a{font-weight:700;} </style>
+    <script>setTimeout(()=>{ location.replace('app.html#set-voicetest'); }, 800);</script>
 </head>
 <body>
-    <div class="container">
-        <h1 class="fancy-title">Evaluate Your Progress</h1>
-        <div id="passageContainer">
-            <div id="passageContent"></div>
-            <div class="control-buttons">
-                <button id="prevPassageButton" class="arrow-button">&lt;</button>
-                <button id="nextPassageButton" class="arrow-button">&gt;</button>
-                <div class="toggle-container">
-                    <label class="switch">
-                        <input type="checkbox" id="adminToggle">
-                        <span class="slider round"></span>
-                    </label>
-                    <span class="toggle-label">Admin Mode</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="recording-container">
-            <button id="recordButton" class="record-button">
-                <i class="fas fa-microphone" id="recordIcon"></i>
-            </button>
-            <span id="recordingStatus">Click to start recording</span>
-        </div>
-        
-        <div class="transcription-container">
-            <span id="transcriptionText"></span>
-        </div>
-        
-        <a href="index.html">Back to Home</a>
+    <div class="redir">
+        <h1>Voice Test moved</h1>
+        <p>Voice Test is now integrated into the Game Hub. Redirecting… If not, <a href="app.html#set-voicetest">click here</a>.</p>
     </div>
-    
-    <script src="js/evaluate.js"></script>
-    <script src="js/audioRecorder.js"></script>
-    <script src="/js/transcriptionService.js"></script>
 </body>
 </html>
