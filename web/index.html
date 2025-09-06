@@ -11,58 +11,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <header id="navBar">
-        <button id="navFlashcards">Flashcards</button>
-        <button id="navMCQ">Multiple Choice</button>
-        <button id="record" onclick="window.location.href='stats.html'">Record</button>
+        <button id="openHub" onclick="location.href='app.html'">Open Game Hub</button>
+        <button id="openMCQ" onclick="location.href='problemset.html?set=1'">Multiple Choice</button>
+        <button id="openStats" onclick="location.href='stats.html'">Stats</button>
     </header>
 
     <div class="container">
-        <!-- Flashcards Section -->
-        <section id="flashcardsPage" class="page">
-            <h1 class="fancy-title">Flashcard Quiz</h1>
-            <div id="flashcard">
-                <button id="prevButton" class="arrow-button">&lt;</button>
-                <div id="flashcardContent">
-                    <div id="flashcardText"></div>
-                    <img id="flashcardImage" src="images/flashcard-icon.png" alt="Flashcard Icon">
-                </div>
-                <button id="nextButton" class="arrow-button">&gt;</button>
-                <audio id="flashcardAudio" src=""></audio>
-            </div>
-            <div id="controls">
-                <button id="playSoundButton">Play Sound</button>
-                <button id="yesButton">Yes</button>
-                <button id="noButton">No</button>
-            </div>
-        </section>
-
-        <!-- Multiple Choice Section -->
-        <section id="mcqPage" class="page" style="display:none;">
-            <h1 class="fancy-title">Multiple Choice Questions</h1>
-            <!-- Problem Set 1 -->
-            <div class="problem-set">
-                <button class="toggle-set" data-set="1" onclick="window.location.href='problemset.html?set=1'">Problem Set 1</button>
-            </div>
-            <!-- Problem Set 2 -->
-            <div class="problem-set">
-                <button class="toggle-set" data-set="2" onclick="window.location.href='problemset.html?set=2'">Problem Set 2</button>
-            </div>
-        </section>
-        <h1 class="fancy-title">Flashcard Quiz</h1>
-        <div id="navigation">
-            <a href="flashcard.html">Start Flashcards</a>
-            <a href="evaluate.html">Evaluate</a>
-        </div>
+        <h1 class="fancy-title">Welcome</h1>
+        <p>Use the buttons above to open the Game Hub or jump to MCQ and Stats.</p>
     </div>
-    <script src="js/script.js"></script>
-    <script>
-        function finishAssessment(score, questionClones, progressKey) {
-            alert(`You completed the assessment!\nYour score: ${score} out of ${questionClones.length}`);
-            localStorage.removeItem(progressKey);
-            window.location.href = "index.html";
-        }
-    </script>
 </body>
 </html>
